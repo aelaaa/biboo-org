@@ -53,9 +53,11 @@
 
     <Button
         android:id="@+id/btnLoginErrorOK"
-        android:layout_width="91dp"
+        android:layout_width="100dp"
         android:layout_height="50dp"
+        android:background="@drawable/shape_btn"
         android:text="Okay"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.502"

@@ -2,14 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    >
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@drawable/new_password_bg"
+        android:background="@drawable/login_confirm_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,62 +21,54 @@
             android:layout_marginTop="40dp"
             android:fontFamily="@font/roboto"
             android:gravity="center"
-            android:text="CHANGE PASSWORD"
+            android:text="CONFIRMATION"
             android:textColor="#000000"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtLoginConfirmDes"
-            android:layout_width="wrap_content"
+            android:layout_width="224dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/roboto"
-            android:layout_marginStart="41dp"
-            android:layout_marginTop="35dp"
-            android:text="Enter New Password:"
+            android:text="Would you like to return to login  page?"
+            android:textAlignment="center"
             android:textColor="#000000"
-            android:textSize="12sp" />
-
-        <EditText
-            android:id="@+id/editTextNumber"
-            android:layout_width="221dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="38dp"
-            android:layout_marginTop="5dp"
-            android:ems="10"
-            android:fontFamily="@font/roboto"
-            android:hint="Example: *********"
-            android:inputType="number"
             android:textSize="12sp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="40dp"
+            android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnOkayPassChanged"
+                android:id="@+id/btnYES"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_margin="10dp"
                 android:background="@drawable/shape_btn"
                 android:fontFamily="@font/roboto"
-                android:text="SUBMIT"
+                android:text="YES"
                 android:textColor="@color/white"
                 android:textSize="14sp" />
 
             <Button
-                android:id="@+id/btnCancel"
+                android:id="@+id/btnNO"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_margin="10dp"
                 android:background="@drawable/shape_btn"
                 android:fontFamily="@font/roboto"
-                android:text="CANCEL"
+                android:text="NO"
                 android:textColor="@color/white"
                 android:textSize="14sp" />
         </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
