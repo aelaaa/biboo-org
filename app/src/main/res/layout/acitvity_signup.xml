@@ -11,7 +11,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="60dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +37,7 @@
             android:fontFamily="@font/roboto"
             android:letterSpacing="0.1"
             android:text="@string/signup"
-            android:textColor="@color/header"
+            android:textColor="@color/subhead"
             android:textSize="30sp"
             android:elevation="10dp"/>
 
@@ -46,8 +46,8 @@
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
-        android:layout_height="320dp"
-        android:layout_marginTop="50dp"
+        android:layout_height="450dp"
+        android:layout_marginTop="80dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
