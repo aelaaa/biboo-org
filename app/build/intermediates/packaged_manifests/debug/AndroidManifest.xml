@@ -28,6 +28,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.BIBOO" >
         <activity
+            android:name="com.example.biboo.Homepage_activity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.biboo.SignUp_activity"
+            android:exported="false" />
+        <activity
             android:name="com.example.biboo.Login_activity"
             android:exported="true" >
             <intent-filter>

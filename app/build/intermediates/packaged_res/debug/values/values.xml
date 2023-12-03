@@ -21,17 +21,20 @@
     <color name="black">#0D201F</color>
     <color name="color_bg">#F1F1F1</color>
     <color name="header">#008981</color>
+    <color name="input_shape_color">#BCBCBC</color>
     <color name="purple_200">#008981</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="subhead">#0D201F</color>
+    <color name="subhead2">#FFEBEB</color>
+    <color name="teal_200">#79BDB9</color>
     <color name="teal_700">#2B9A99</color>
-    <color name="vector_bg">#79BDB9</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">BIBOO</string>
+    <string name="copyright">© Copyright All rights reserved.</string>
     <string name="signup">SIGN UP</string>
     <string name="welcome"><u>WELCOME</u></string>
-    <style name="Theme.BIBOO" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.BIBOO" parent="Theme.AppCompat.Light.NoActionBar">
         
         <item name="colorPrimary">#008981</item>
         <item name="colorPrimaryVariant">#0D201F</item>
