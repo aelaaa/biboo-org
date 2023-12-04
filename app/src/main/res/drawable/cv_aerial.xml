@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="@color/aerial_banner"
+        android:endColor="@color/half_oppacity_aerial_banner"
+        android:angle="90"/>
+</shape>

@@ -2,9 +2,9 @@
     <string name="app_name">BIBOO</string>
 
 
-
     //Kai imports
-    <string name = "welcome"><u>WELCOME</u></string>
-    <string name = "signup">SIGN UP</string>
-    <string name ="copyright">© Copyright All rights reserved.</string>
+    <string name="welcome"><u>WELCOME</u></string>
+    <string name="signup">SIGN UP</string>
+    <string name="copyright">© Copyright All rights reserved.</string>
+    <string name="animalia"><U>ANIMALIA</U></string>
 </resources>

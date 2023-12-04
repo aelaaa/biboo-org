@@ -14,4 +14,15 @@
     <color name ="subhead">#0D201F</color>
     <color name ="input_shape_color">#BCBCBC</color>
     <color name ="subhead2">#FFEBEB</color>
+
+    <color name ="land_banner">#008981</color>
+    <color name ="half_oppacity_land_banner">#80008981</color>
+    <color name="aerial_banner">#0077B6</color>
+    <color name ="half_oppacity_aerial_banner">#800077B6</color>
+    <color name="aquatic_banner">#03045E</color>
+    <color name ="half_oppacity_aquatic_banner">#8003045E</color>
+    <color name="prehistoric_banner">#0D201F</color>
+    <color name ="half_oppacity_prehistoric_banner">#800D201F</color>
+
+
 </resources>
