@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -18,7 +19,7 @@ public class Login_activity extends AppCompatActivity {
     TextView forgot, privacy, terms;
     Button login, signup;
 
-    SQLiteDatabase db;
+    static SQLiteDatabase db;
     Cursor cursor;
 
     @Override
@@ -38,14 +39,16 @@ public class Login_activity extends AppCompatActivity {
 
         //setting up the database
         db = openOrCreateDatabase("BIBOO", Context.MODE_PRIVATE,null);
-        db.execSQL("CREATE TABLE IF NOT EXISTS BIBOO" + "(Username TEXT PRIMARY KEY, Password TEXT);");
+        db.execSQL("CREATE TABLE IF NOT EXISTS BIBOO" +
+                "(Username TEXT PRIMARY KEY, Password TEXT);");
         username.requestFocus();
 
-
     }
+
+
     //for signup
     private void signupaccount() {
-        Intent signup = new Intent();
+        Intent signup = new Intent(Login_activity.this, SignUp_activity.class);
         startActivity(signup);
         finish();
     }
@@ -68,6 +71,9 @@ public class Login_activity extends AppCompatActivity {
                 cursor.moveToFirst();
                 if (cursor.getString(1).equals(pass)){
                     // intent to homepage
+                    Intent homepage = new Intent(Login_activity.this, Homepage_activity.class);
+                    startActivity(homepage);
+                    finish();
                 } else {
                     Toast.makeText(this, "Incorrect Username and/or Password!", Toast.LENGTH_SHORT).show();
                     clear();

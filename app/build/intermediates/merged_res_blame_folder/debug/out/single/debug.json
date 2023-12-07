@@ -1,114 +1,166 @@
 [
     {
-        "merged": "com.example.biboo.app-merged_res-31:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.biboo.app-main-33:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\drawable_signup_form.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\drawable\\signup_form.xml"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/drawable_change_password_bg.png.flat",
-        "source": "com.example.biboo.app-main-33:/drawable/change_password_bg.png"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\drawable_signup_bg.png.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\drawable\\signup_bg.png"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.example.biboo.app-main-33:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\drawable_new_pass_confirm_bg.png.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\drawable\\new_pass_confirm_bg.png"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/layout_activity_login.xml.flat",
-        "source": "com.example.biboo.app-main-33:/layout/activity_login.xml"
+        "merged": "com.example.biboo.app-merged_res-31:/layout_activity_main.xml.flat",
+        "source": "com.example.biboo.app-main-33:/layout/activity_main.xml"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/drawable_round_shape.xml.flat",
-        "source": "com.example.biboo.app-main-33:/drawable/round_shape.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/drawable_shapeblk_btn.xml.flat",
-        "source": "com.example.biboo.app-main-33:/drawable/shapeblk_btn.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.biboo.app-main-33:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\drawable_new_pass_success_bg.png.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\drawable\\new_pass_success_bg.png"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/layout_prompt_change_password.xml.flat",
-        "source": "com.example.biboo.app-main-33:/layout/prompt_change_password.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\font_roboto.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\font\\roboto.xml"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.biboo.app-main-33:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.example.biboo.app-main-33:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\drawable_line_svgrepo_com.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\drawable\\line_svgrepo_com.xml"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.example.biboo.app-main-33:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\drawable_login_error_bg.png.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\drawable\\login_error_bg.png"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/xml_backup_rules.xml.flat",
-        "source": "com.example.biboo.app-main-33:/xml/backup_rules.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\drawable_shapeblk_btn.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\drawable\\shapeblk_btn.xml"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/drawable_shape_btn.xml.flat",
-        "source": "com.example.biboo.app-main-33:/drawable/shape_btn.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\layout_prompt_new_password_confirmation.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\layout\\prompt_new_password_confirmation.xml"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.biboo.app-main-33:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\drawable_shape_btn.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\drawable\\shape_btn.xml"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.example.biboo.app-main-33:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "com.example.biboo.app-main-33:/drawable-v24/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\drawable_input_background.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\drawable\\input_background.xml"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/font_roboto.xml.flat",
-        "source": "com.example.biboo.app-main-33:/font/roboto.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\layout_prompt_new_pass_success.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\layout\\prompt_new_pass_success.xml"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.biboo.app-main-33:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/xml_data_extraction_rules.xml.flat",
-        "source": "com.example.biboo.app-main-33:/xml/data_extraction_rules.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\drawable_login.png.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\drawable\\login.png"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.biboo.app-main-33:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\layout_prompt_change_password.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\layout\\prompt_change_password.xml"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/layout_prompt_login_error.xml.flat",
-        "source": "com.example.biboo.app-main-33:/layout/prompt_login_error.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\font_roboto_bold.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\font\\roboto_bold.xml"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.biboo.app-main-33:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\layout_activity_signup.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\layout\\activity_signup.xml"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/drawable_login_error_bg.png.flat",
-        "source": "com.example.biboo.app-main-33:/drawable/login_error_bg.png"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.example.biboo.app-main-33:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\layout_acitvity_signup.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\layout\\acitvity_signup.xml"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.example.biboo.app-main-33:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/layout_log.xml.flat",
-        "source": "com.example.biboo.app-main-33:/layout/log.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/drawable_line_svgrepo_com.xml.flat",
-        "source": "com.example.biboo.app-main-33:/drawable/line_svgrepo_com.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "com.example.biboo.app-merged_res-31:/font_roboto_bold.xml.flat",
-        "source": "com.example.biboo.app-main-33:/font/roboto_bold.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\layout_prompt_login_error.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\layout\\prompt_login_error.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\layout_prompt_new_password.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\layout\\prompt_new_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\drawable_button2.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\drawable\\button2.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\drawable_new_password_bg.png.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\drawable\\new_password_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\drawable_round_shape.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\drawable\\round_shape.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-merged_res-31:\\drawable_change_password_bg.png.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.2\\com.example.biboo.app-main-33:\\drawable\\change_password_bg.png"
     }
 ]
