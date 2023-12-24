@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    tools:context=".GalleryV2">
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txt_galleryClassificiation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/land"
+            android:textColor="@color/header"
+            android:textSize="24sp"
+
+            />
+
+        <TextView
+            android:id="@+id/txt_galleryDescription"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/animal_gallery_descript_border"
+            android:fontFamily="@font/roboto"
+            android:gravity="fill_horizontal"
+            android:padding="10dp"
+            android:text="Description: "
+            android:textColor="@color/subhead"
+            android:textSize="14sp" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/reView_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_gravity="center"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3" />
+
+        <Button
+            android:id="@+id/btn_galleryV2_back"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginBottom="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button2"
+            android:drawablePadding="8dp"
+            android:elevation="10dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Back"
+            android:textColor="@color/subhead2"
+            android:textSize="16sp"
+            />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
