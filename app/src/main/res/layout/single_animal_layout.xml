@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/animal_laybg"
+    android:elevation="10dp"
+    android:clipToOutline="true">
+
+    <ImageView
+        android:id="@+id/iv_single_animal"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/round_corner"
+        android:clipToOutline="true"
+        android:src="@drawable/img_cat"/>
+
+    <TextView
+        android:id="@+id/txt_single_animal_name"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="CAT"
+        android:textAlignment="center"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/subhead2"
+        android:textSize="14sp"
+        android:background="@color/subhead"
+        android:padding="5dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-- ANIMAL DATA --"
+        android:padding="5dp"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/header"
+        android:textSize="14sp"
+        android:letterSpacing="0.2"
+        android:textAlignment="center"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/input_shape_color"/>
+
+    <TextView
+        android:id="@+id/txt_single_scientific_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:text="Scientific Name: "
+        android:paddingLeft="2dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/subhead"
+        android:textSize="12sp"
+        android:layout_marginBottom="5dp"
+        />
+    <TextView
+        android:id="@+id/txt_single_classification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:paddingLeft="2dp"
+        android:text="Classification: "
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/subhead"
+        android:textSize="12sp"
+        android:layout_marginBottom="5dp"
+        />
+    <TextView
+        android:id="@+id/txt_single_habitat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:paddingLeft="2dp"
+        android:text="Habitat: "
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/subhead"
+        android:textSize="12sp"
+        android:layout_marginBottom="5dp"
+        />
+    <TextView
+        android:id="@+id/txt_single_diet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:paddingLeft="2dp"
+        android:text="Diet: "
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/subhead"
+        android:textSize="12sp"
+        android:layout_marginBottom="5dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="5dp"
+        android:text="- ANIMAL DESCRIPTION - "
+        android:textAlignment="center"
+        android:letterSpacing="0.1"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/header"
+        android:textSize="12sp"
+        android:layout_marginBottom="5dp"
+        android:padding="2dp"
+        android:background="@color/input_shape_color"
+        />
+
+    <TextView
+        android:id="@+id/txt_single_description"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="Description here: "
+        android:padding="5dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/subhead"
+        android:gravity="fill_horizontal"
+        android:textSize="10sp"
+        android:background="@drawable/single_animal_descrip_border"
+        android:layout_marginBottom="10dp"
+        />
+
+        <Button
+            android:id="@+id/btn_return"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button2"
+            android:text="RETURN TO GALLERY"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/subhead2"/>
+
+
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

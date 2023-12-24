@@ -7,4 +7,13 @@
     <string name="signup">SIGN UP</string>
     <string name="copyright">© Copyright All rights reserved.</string>
     <string name="animalia"><U>ANIMALIA</U></string>
+    <string name="land"><U>LAND ANIMALS</U></string>
+    <string name="aquatic"><U>AQUATIC ANIMALS</U></string>
+    <string name="aerial"><U>AERIAL ANIMALS</U></string>
+    <string name="prehistoric"><U>PREHISTORIC ANIMALS</U></string>
+
+    <string name="land_animals">Land animals are a varied group of organisms that inhabit terrestrial environments, ranging from microscopic insects to large mammals. They have adapted to life on land, developing structures such as legs or limbs for locomotion and diverse survival strategies in different ecosystems.</string>
+    <string name="aquatic_animals">Aquatic animals, residing in water environments, exhibit a wide spectrum of adaptations for life beneath the surface. From streamlined fish with fins for swimming to marine mammals like dolphins, these organisms have evolved diverse traits to navigate and thrive in aquatic habitats.</string>
+    <string name="aerial_animals">Aerial animals, also known as flying animals, have evolved unique adaptations for life in the skies. From agile birds with wings for flight to insects employing intricate wing structures, these organisms demonstrate remarkable abilities to soar and navigate through the air.</string>
+    <string name="prehistoric_animals">Prehistoric animals, existing in the vast expanse of time before recorded history, encompass a fascinating array of now-extinct species. Ranging from colossal dinosaurs to early marine lifeforms, these ancient creatures contribute to our understanding of the Earth dynamic evolutionary history.</string>
 </resources>
