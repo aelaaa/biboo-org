@@ -11,7 +11,8 @@
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginHorizontal="30dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +28,7 @@
             android:text="@string/welcome"
             android:textColor="@color/header"
             android:textSize="60sp"
-            android:elevation="10dp"/>
+            android:elevation="8dp"/>
 
         <TextView
             android:id="@+id/txt_signup"
@@ -39,28 +40,29 @@
             android:text="@string/signup"
             android:textColor="@color/subhead"
             android:textSize="30sp"
-            android:elevation="10dp"/>
+            android:elevation="8dp"/>
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="wrap_content"
-        android:layout_height="450dp"
-        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="30dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <ScrollView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:elevation="10dp"
+            android:elevation="8dp"
             android:fillViewport="true">
 
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="320dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/signup_form"
                 android:orientation="vertical">
@@ -235,7 +237,7 @@
                     android:textColor="@color/subhead"
                     android:textSize="14sp" />
 
-            </androidx.appcompat.widget.LinearLayoutCompat>
+            </LinearLayout>
         </ScrollView>
     </LinearLayout>
 
@@ -248,6 +250,7 @@
         android:elevation="10dp"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/signup"
+        android:letterSpacing="0.1"
         android:textColor="@color/subhead2"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
@@ -258,7 +261,7 @@
         android:id="@+id/txt_copyrights"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="© Copyright. All rights reserved."
         android:fontFamily="@font/roboto_bold"
         android:textColor="@color/subhead"

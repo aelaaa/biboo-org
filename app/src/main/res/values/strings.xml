@@ -5,6 +5,9 @@
     //Kai imports
     <string name="welcome"><u>WELCOME</u></string>
     <string name="signup">SIGN UP</string>
+    <string name="login">LOGIN</string>
+    <string name="termsConditions">Terms and Conditions</string>
+    <string name="data_privacy">Data Privacy Act of 2012</string>
     <string name="copyright">© Copyright All rights reserved.</string>
     <string name="animalia"><U>ANIMALIA</U></string>
     <string name="land"><U>LAND ANIMALS</U></string>

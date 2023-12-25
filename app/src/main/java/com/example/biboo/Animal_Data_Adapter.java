@@ -1,22 +1,16 @@
 package com.example.biboo;
 
-import android.util.Log;
-import android.util.TypedValue;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import androidx.appcompat.widget.LinearLayoutCompat;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-
-import java.io.File;
 import java.util.ArrayList;
 
 public class Animal_Data_Adapter extends RecyclerView.Adapter<Animal_Data_Adapter.ViewData> {
