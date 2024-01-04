@@ -1,7 +1,6 @@
 package com.example.biboo;
 
 import android.content.Context;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,18 +13,13 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 
 import java.util.ArrayList;
 
 public class Animal_Gallery_Dialog extends DialogFragment {
 
-    ArrayList<Animal_Model> animalData = new ArrayList<Animal_Model>();
-
-    private Button btn_return;
-    private TextView txtAnimalName, txtScientificName, txtClassification, txtHabitat, txtDiet, txtDescription;
-    private String animalName, animal_source;
-    private ImageView animal;
+    ArrayList<Animal_Model> animalData;
+    private final String animalName;
 
     public Animal_Gallery_Dialog(ArrayList<Animal_Model> animalData, Context context, String animal_name) {
         this.animalData = animalData;
@@ -34,8 +28,7 @@ public class Animal_Gallery_Dialog extends DialogFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.single_animal_layout, container, false);
-        return view;
+        return inflater.inflate(R.layout.single_animal_layout, container, false);
     }
 
     @Override
@@ -43,20 +36,18 @@ public class Animal_Gallery_Dialog extends DialogFragment {
         super.onViewCreated(view, savedInstanceState);
         setCancelable(false);
         // data iniialization for the dialogFragment prompt
-        animal = view.findViewById(R.id.iv_single_animal);
-        btn_return = view.findViewById(R.id.btn_return);
-        txtAnimalName = view.findViewById(R.id.txt_single_animal_name);
-        txtScientificName = view.findViewById(R.id.txt_single_scientific_name);
-        txtClassification = view.findViewById(R.id.txt_single_classification);
-        txtHabitat = view.findViewById(R.id.txt_single_habitat);
-        txtDiet = view.findViewById(R.id.txt_single_diet);
-        txtDescription = view.findViewById(R.id.txt_single_description);
+        ImageView animal = view.findViewById(R.id.iv_single_animal);
+        Button btn_return = view.findViewById(R.id.btn_return);
+        TextView txtAnimalName = view.findViewById(R.id.txt_single_animal_name);
+        TextView txtScientificName = view.findViewById(R.id.txt_single_scientific_name);
+        TextView txtClassification = view.findViewById(R.id.txt_single_classification);
+        TextView txtHabitat = view.findViewById(R.id.txt_single_habitat);
+        TextView txtDiet = view.findViewById(R.id.txt_single_diet);
+        TextView txtDescription = view.findViewById(R.id.txt_single_description);
 
 
         // Finding the clicked animal in the list based on the animalName
         Animal_Model clickedAnimal = findAnimalByName(animalName);
-        //getting the animal source by using getImageSource()
-        animal_source = clickedAnimal.getImageSource();
 
         //condition if clicked animal is null
         if (clickedAnimal != null) {

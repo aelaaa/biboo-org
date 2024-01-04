@@ -2,39 +2,41 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="300dp"
     android:layout_height="wrap_content">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="@drawable/login_error_bg"
         android:orientation="vertical"
+        android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/txtUsernameTaken"
+            android:id="@+id/txthintTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="ERROR"
+            android:text="HINT!"
+            android:letterSpacing="0.1"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/txtUserTakenDes"
+            android:id="@+id/txtHintDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="Incorrect username and password."
+            android:text="Aquatic creature with a long body and limbs, resembling a primitive amphibian, known for its carnivorous diet."
             android:textColor="@color/black"
-            android:textSize="12sp" />
+            android:textSize="14sp" />
 
         <LinearLayout
             android:id="@+id/btnLinear"
@@ -46,10 +48,10 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnOKAY"
+                android:id="@+id/btn_hint_okay"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/shape_btn"
+                android:background="@drawable/button2"
                 android:fontFamily="@font/roboto"
                 android:text="OKAY"
                 android:textColor="@color/white"

@@ -11,7 +11,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:layout_marginHorizontal="30dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,7 +84,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/input_background"
                     android:fontFamily="@font/roboto"
-                    android:hint="example: John Dela Cruz"
+                    android:hint="example: Juan Dela Cruz"
                     android:textColor="@color/subhead"
                     android:textSize="14sp" />
 
@@ -110,7 +110,6 @@
                         android:layout_margin="10dp"
                         android:background="@drawable/input_background"
                         android:fontFamily="@font/roboto"
-
                         android:text="Set Date" />
                 </LinearLayout>
 

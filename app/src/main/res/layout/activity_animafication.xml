@@ -5,54 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F1F1F1"
-    tools:context=".animafication">
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineHorizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.500684" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineVertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.50121653" />
+    tools:context=".Animafication">
 
 
     <TextView
         android:id="@+id/tvLevel_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="100dp"
         android:text="Level 0:0"
         android:textColor="@color/black"
         android:textSize="25dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintHorizontal_bias="0.528"
-        app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
         android:layout_width="316dp"
         android:layout_height="235dp"
-        app:cardCornerRadius="15dp"
+        android:layout_marginTop="20dp"
         android:background="#F1F1F1"
         android:elevation="20dp"
-        android:layout_marginBottom="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
-        >
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLevel_count">
 
         <ImageView
             android:id="@+id/imgAnimafication"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:scaleType="centerCrop"
             android:elevation="20dp"
             android:src="@drawable/img_weasel" />
 
@@ -60,21 +45,34 @@
 
     <TextView
         android:id="@+id/tvScore"
-        android:layout_width="66dp"
-        android:layout_height="28dp"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="20dp"
+        android:fontFamily="@font/roboto_bold"
         android:background="@drawable/bg_score_outline"
         android:gravity="center"
         android:text="100"
         app:layout_constraintEnd_toStartOf="@+id/imgSettings"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/tvscore_show"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:gravity="center"
+        android:text="100"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/header"
+        app:layout_constraintEnd_toEndOf="@+id/tvScore"
+        app:layout_constraintStart_toStartOf="@+id/tvScore"
+        app:layout_constraintTop_toBottomOf="@id/tvScore" />
+
     <ImageView
         android:id="@+id/imgSettings"
         android:layout_width="33dp"
         android:layout_height="34dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="44dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -85,7 +83,7 @@
         android:layout_width="33dp"
         android:layout_height="34dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="26dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/icon_information" />
@@ -95,57 +93,61 @@
         android:layout_width="33dp"
         android:layout_height="34dp"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/icon_bulb" />
 
     <EditText
         android:id="@+id/edtCorrectWord"
-        android:layout_width="316dp"
-        android:layout_height="57dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
         android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="20dp"
         android:background="@drawable/bg_grey_box"
+        android:elevation="10dp"
         android:ems="10"
         android:inputType="text"
-        android:text="TYPE HERE"
+        android:hint="Type your guess here"
+        android:textAlignment="center"
         android:textSize="30dp"
         android:textStyle="bold"
-        android:textAlignment="center"
-        android:elevation="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView5" />
 
     <TextView
         android:id="@+id/tvJumbleeWord"
-        android:layout_width="316dp"
-        android:layout_height="57dp"
-        android:text="E S L W A E"
-        android:textSize="30dp"
-        android:textColor="#55C5C0"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:elevation="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
         android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="20dp"
         android:background="@drawable/bg_dark"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:text="ESLWAE"
+        android:letterSpacing="0.1"
+        android:textColor="#55C5C0"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtCorrectWord" />
 
     <Button
         android:id="@+id/btnSubmitFixJumble"
-        android:layout_width="316dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="28dp"
-        android:text="SUBMIT"
-        android:textSize="25dp"
-        android:elevation="10dp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="20dp"
         android:background="@drawable/bg_darky_green"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+        android:elevation="10dp"
+        android:text="SUBMIT"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvJumbleeWord" />
 
 

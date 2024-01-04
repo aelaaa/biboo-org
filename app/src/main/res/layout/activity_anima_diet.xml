@@ -1,91 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/animaDiet_ConstraintLayout"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".anima_diet">
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineHorizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.500684"/>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineVertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.50121653" />
-
-
+    tools:context=".Anima_Diet">
 
 
     <TextView
         android:id="@+id/tvLevel_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
         android:layout_marginTop="90dp"
         android:text="Level 0:0"
         android:textColor="@color/black"
         android:textSize="25dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintHorizontal_bias="0.528"
-        app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="316dp"
+        android:layout_width="match_parent"
         android:layout_height="235dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
         android:background="#F1F1F1"
         android:elevation="20dp"
         app:cardCornerRadius="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintStart_toStartOf="@+id/guidelineVertical">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLevel_count">
 
         <ImageView
             android:id="@+id/imgAnimaDiet"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:elevation="20dp"
+            android:scaleType="centerCrop"
             android:src="@drawable/img_weasel" />
 
     </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/tvScore"
-        android:layout_width="66dp"
-        android:layout_height="28dp"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="20dp"
+        android:fontFamily="@font/roboto_bold"
         android:background="@drawable/bg_score_outline"
         android:gravity="center"
         android:text="100"
         app:layout_constraintEnd_toStartOf="@+id/imgSettings"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/tvscore_show"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:gravity="center"
+        android:text="100"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/header"
+        app:layout_constraintEnd_toEndOf="@+id/tvScore"
+        app:layout_constraintStart_toStartOf="@+id/tvScore"
+        app:layout_constraintTop_toBottomOf="@id/tvScore" />
+
     <ImageView
         android:id="@+id/imgSettings"
         android:layout_width="33dp"
         android:layout_height="34dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="26dp"
         android:layout_marginEnd="44dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icon_settings" />
+        app:srcCompat="@drawable/icon_settings"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imgInfo"
         android:layout_width="33dp"
         android:layout_height="34dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="26dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/icon_information" />
@@ -95,7 +96,7 @@
         android:layout_width="33dp"
         android:layout_height="34dp"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/icon_bulb" />
@@ -105,10 +106,11 @@
         android:layout_width="151dp"
         android:layout_height="81dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="25dp"
+        android:tag="Carnivore"
         android:background="@drawable/bg_grey_box"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
 
         <ImageView
             android:id="@+id/icon_carnivores"
@@ -141,18 +143,19 @@
         android:id="@+id/img_herbivores"
         android:layout_width="151dp"
         android:layout_height="81dp"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:tag="herbivore"
         android:background="@drawable/bg_dark"
-        app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
 
         <ImageView
             android:id="@+id/icon_herbivores"
             android:layout_width="67dp"
             android:layout_height="55dp"
-            android:scaleType="fitCenter"
             android:layout_marginTop="5dp"
+            android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -183,10 +186,11 @@
         android:id="@+id/img_omnivores"
         android:layout_width="151dp"
         android:layout_height="81dp"
+        android:layout_marginTop="20dp"
+        android:tag="Omnivore"
         android:background="@drawable/bg_dark"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_carnivores_">
 
         <ImageView
@@ -237,61 +241,55 @@
         android:id="@+id/img_drop_box"
         android:layout_width="340dp"
         android:layout_height="148dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
+        android:foregroundGravity="center_horizontal"
         android:background="@drawable/bg_darky_green"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintHorizontal_bias="0.605"
-        app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_omnivores">
 
         <ImageView
             android:id="@+id/icon_diet"
             android:layout_width="67dp"
             android:layout_height="55dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/icon_animadiet"
+            android:backgroundTint="@color/white"
             android:scaleType="fitCenter"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.477"
-            app:srcCompat="@drawable/icon_anima_diet"
-            app:tint="@color/white" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvanimaldiet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="25dp"
             android:fontFamily="@font/roboto"
             android:text="ANIMAL DIET"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/icon_diet"
-            app:layout_constraintVertical_bias="0.996" />
+            app:layout_constraintTop_toBottomOf="@+id/icon_diet" />
 
         <TextView
             android:id="@+id/tvguide"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
             android:fontFamily="@font/roboto"
             android:text="(DRAG AND DROP HERE THEIR FOOD)"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="10dp"
+            android:textSize="12dp"
             android:textStyle="bold"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvanimaldiet" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

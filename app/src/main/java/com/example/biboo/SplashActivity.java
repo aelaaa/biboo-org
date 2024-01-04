@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.View;
 import android.widget.ProgressBar;
 
 @SuppressLint("CustomSplashScreen")
@@ -19,10 +21,12 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        ImmersiveMode.enableImmersiveMode(getWindow().getDecorView());
 
         progressBar = findViewById(R.id.splashProgressBar);
         startDelayedSplashProgress();
     }
+
 
     public void SplashProgress() {
         handler = new Handler(Looper.getMainLooper());
@@ -63,3 +67,4 @@ public class SplashActivity extends AppCompatActivity {
         }, 2000); // Delay for 2000 milliseconds (adjust as needed)
     }
 }
+

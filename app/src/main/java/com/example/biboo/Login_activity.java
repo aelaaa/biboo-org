@@ -1,11 +1,14 @@
 package com.example.biboo;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,40 +21,36 @@ public class Login_activity extends AppCompatActivity {
     EditText username, password;
     TextView forgot, privacy, terms;
     Button login, signup;
-
-    static SQLiteDatabase db;
+    static User_Database user_database;
     Cursor cursor;
+    Prompt_Dialogs promptDialogs;
+    private static final int SIGNUP_REQUEST_CODE = 100;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        ImmersiveMode.enableImmersiveMode(getWindow().getDecorView());
+        promptDialogs = new Prompt_Dialogs(this);
 
         username = findViewById(R.id.login_username_edittext);
         password = findViewById(R.id.login_password_edittext);
-        forgot = findViewById(R.id.forgotpass_textview);
-        privacy = findViewById(R.id.privacy_textview);
-        terms = findViewById(R.id.terms_textview);
         login = findViewById(R.id.login_btn);
         signup = findViewById(R.id.signup_btn);
         login.setOnClickListener(v-> loginaccount());
         signup.setOnClickListener(v-> signupaccount());
 
-        //setting up the database
-        db = openOrCreateDatabase("BIBOO", Context.MODE_PRIVATE,null);
-        db.execSQL("CREATE TABLE IF NOT EXISTS BIBOO" +
-                "(Username TEXT PRIMARY KEY, Password TEXT);");
+
+        user_database = new User_Database(this);
         username.requestFocus();
-
     }
 
 
-    //for signup
-    private void signupaccount() {
-        Intent signup = new Intent(Login_activity.this, SignUp_activity.class);
-        startActivity(signup);
-        finish();
-    }
+
+
+
 
     // to Login btn and validation
     void loginaccount(){
@@ -59,28 +58,75 @@ public class Login_activity extends AppCompatActivity {
         String pass = password.getText().toString();
 
         if (user.isEmpty() || pass.isEmpty()){
-            Toast.makeText(this, "Please enter all the missing values", Toast.LENGTH_SHORT).show();
             clear();
+            promptDialogs.statusDialogs("ERROR!", "Please enter all the missing fields!");
+            promptDialogs.show();
+
+
+
 
         }else {
-            cursor = db.rawQuery("SELECT * FROM BIBOO WHERE Username = '" + user + "'", null);
+            SQLiteDatabase db = user_database.getReadableDatabase();
+            cursor = db.rawQuery("SELECT * FROM " + User_Database.TABLE_NAME + " WHERE username = ?", new String[]{user});
+
             if (cursor.getCount() == 0){
-                Toast.makeText(this, "Incorrect Username and/or Password!", Toast.LENGTH_SHORT).show();
                 clear();
+                if(!isFinishing()) {
+                    promptDialogs.statusDialogs("ERROR!", "Incorrect Username and/or Password!");
+                        promptDialogs.show();
+
+                }
+
+
             } else {
                 cursor.moveToFirst();
                 if (cursor.getString(1).equals(pass)){
-                    // intent to homepage
+                    // Save username in shared preferences
+                    saveUsernameInPreferences(user);
                     Intent homepage = new Intent(Login_activity.this, Homepage_activity.class);
                     startActivity(homepage);
                     finish();
                 } else {
-                    Toast.makeText(this, "Incorrect Username and/or Password!", Toast.LENGTH_SHORT).show();
                     clear();
+                    promptDialogs.statusDialogs("ERROR!", "Incorrect Username and/or Password!");
+                            promptDialogs.show();
                 }
+            }
+
+            cursor.close();
+            db.close();
+        }
+    }
+
+    //for signup
+    private void signupaccount() {
+        Intent signup = new Intent(Login_activity.this, SignUp_activity.class);
+        startActivityForResult(signup, SIGNUP_REQUEST_CODE);
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == SIGNUP_REQUEST_CODE && resultCode == RESULT_OK) {
+            if (data != null) {
+                // Extract the username from the signup activity result
+                String usernameFromSignup = data.getStringExtra("username");
+
+                // Save the username in shared preferences
+                saveUsernameInPreferences(usernameFromSignup);
+
+                // Navigate to the homepage activity
+                Intent homepage = new Intent(Login_activity.this, Homepage_activity.class);
+                startActivity(homepage);
             }
         }
     }
+    private void saveUsernameInPreferences(String username) {
+        SharedPreferences preferences = getSharedPreferences("user_prefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("username", username);
+        editor.apply();
+    }
+
 
 
     //clearing all inputs in edittext fields

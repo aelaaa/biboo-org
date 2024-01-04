@@ -1,16 +1,17 @@
 package com.example.biboo;
 
 public class Animal_Model {
-    String animal_name, scientificName, classification, habitat, diet, description, img_source;
+    String animal_name, scientificName, classification, habitat, diet, description, trivia, img_source;
     int id;
 
-    public Animal_Model(int id, String animal, String scientific_name, String classification, String habitat, String diet, String description, String image_source) {
+    public Animal_Model(int id, String animal, String scientific_name, String classification, String habitat, String diet, String description, String trivia, String image_source) {
         this.id = id;
         this.animal_name = animal;
         this.scientificName = scientific_name;
         this.classification = classification;
         this.habitat = habitat;
         this.diet = diet;
+        this.trivia = trivia;
         this.description = description;
         this.img_source = image_source;
     }
@@ -31,6 +32,8 @@ public class Animal_Model {
         public void setDiet(String diet) {this.diet = diet;}
         public String getDescription() {return description;}
         public void setDescription(String description) {this.description = description;}
+        public String getTrivia() {return trivia;}
+        public void setTrivia() {this.trivia = trivia;}
         public String getImageSource() {
             return img_source;
         }

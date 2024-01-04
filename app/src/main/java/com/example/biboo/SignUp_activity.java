@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,13 +27,16 @@ public class SignUp_activity extends AppCompatActivity {
     RadioGroup rdg_gender;
     RadioButton rdbtn_male, rdbtn_female;
     Cursor cursor;
-    private Login_activity db;
+    User_Database user_database;
+    int age;
+     Prompt_Dialogs promptDialogs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-
+        ImmersiveMode.enableImmersiveMode(getWindow().getDecorView());
+        promptDialogs = new Prompt_Dialogs(this);
 
         signup_name = findViewById(R.id.etx_signup_name);
         signup_email = findViewById(R.id.etx_signup_email);
@@ -43,95 +48,146 @@ public class SignUp_activity extends AppCompatActivity {
         rdbtn_male = findViewById(R.id.rdbtn_male);
         rdbtn_female = findViewById(R.id.rdbtn_female);
         rdg_gender = findViewById(R.id.btn_grp_Gender);
+        user_database = new User_Database(this);
 
-        db = new Login_activity();
 
-        Sign_Up();
-        setDate();
+
+        //button listener actions
+        btnBirthdate.setOnClickListener(V -> {
+            setDate();
+        });
+        btnsignup.setOnClickListener(V -> {
+            Sign_Up();
+        });
 
     }
+
+
 
 
     public void setDate() {
+        Calendar calendar = Calendar.getInstance();
+        int currentYear = calendar.get(Calendar.YEAR);
+        int currentMonth = calendar.get(Calendar.MONTH);
+        int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
 
-        btnBirthdate.setOnClickListener(V -> {
+        DatePickerDialog datePickerDialog = new DatePickerDialog(
+                this,
+                (DatePicker datePicker, int year, int monthOfYear, int dayOfMonth) -> {
+                    // Handle the selected date
+                    String selectedDate = String.format("%02d/%02d/%04d", dayOfMonth, monthOfYear + 1, year);
 
-            Calendar calendar = Calendar.getInstance();
-            int currentYear = calendar.get(Calendar.YEAR);
-            int currentMonth = calendar.get(Calendar.MONTH);
-            int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
+                    // Calculate age based on the selected date
+                    age = calculateAge(year, monthOfYear, dayOfMonth);
+                    btnBirthdate.setText(selectedDate);
+                },
+                currentYear,
+                currentMonth,
+                currentDay
+        );
 
-            DatePickerDialog datePickerDialog = new DatePickerDialog(
-                    this,
-                    (DatePicker datePicker, int year, int monthOfYear, int dayOfMonth) -> {
-                        // Handle the selected date
-                        String selectedDate = String.format("%02d/%02d/%04d", dayOfMonth, monthOfYear + 1, year);
-                        btnBirthdate.setText(selectedDate);
-                    },
-                    currentYear,
-                    currentMonth,
-                    currentDay
-            );
-            datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
-            datePickerDialog.show();
-        });
+        // Set the maximum date to the current date to prevent selecting future dates
+        datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
+
+        datePickerDialog.show();
+    }
+
+    private int calculateAge(int birthYear, int birthMonth, int birthDay) {
+        Calendar dob = Calendar.getInstance();
+        dob.set(birthYear, birthMonth, birthDay);
+
+        Calendar today = Calendar.getInstance();
+
+        int age = today.get(Calendar.YEAR) - dob.get(Calendar.YEAR);
+
+        if (today.get(Calendar.DAY_OF_YEAR) < dob.get(Calendar.DAY_OF_YEAR)) {
+            age--;
+        }
+
+        return age;
     }
 
     public void Sign_Up(){
-
-        btnsignup.setOnClickListener(V -> {
 
             int selectedGenderId = rdg_gender.getCheckedRadioButtonId();
             String gender;
             if (selectedGenderId == R.id.rdbtn_male) {
                 gender = "Male";
-            } else {
+            }
+            else if (selectedGenderId == R.id.rdbtn_female){
                 gender = "Female";
             }
+            else {gender = "Unknown";}
 
-            String name = signup_name.getText().toString();
-            String username = signup_username.getText().toString();
-            String email = signup_email.getText().toString();
-            String password = signup_password.getText().toString();
-            String confirmPassword = signup_confirmpassword.getText().toString();
-            String birthdate = btnBirthdate.getText().toString();
+            String name = signup_name.getText().toString().trim();
+            String username = signup_username.getText().toString().trim();
+            String email = signup_email.getText().toString().trim();
+            String password = signup_password.getText().toString().trim();
+            String confirmPassword = signup_confirmpassword.getText().toString().trim();
+            String birthdate = btnBirthdate.getText().toString().trim();
 
-            if (name.isEmpty() || username.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty() ||
-                birthdate.isEmpty() || (selectedGenderId == -1) ) {
-
-                Toast.makeText(this, "Please fill in all the fields", Toast.LENGTH_SHORT).show();
-                return;
+        if (name.isEmpty() || username.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty() || birthdate.isEmpty() || selectedGenderId == -1) {
+            clear();
+            promptDialogs.statusDialogs("ERROR!", "Please fill in all the fields!");
+            promptDialogs.show();
+        } else {
+            // Check if age is between 0 and 150
+            if (age == 0 || age > 150) {
+                clear();
+                btnBirthdate.requestFocus();
+                promptDialogs.statusDialogs("ERROR!", "Invalid age! Please select a valid birthdate.");
+                promptDialogs.show();
             } else {
-
+                SQLiteDatabase db = user_database.getWritableDatabase();
                 if (password.equals(confirmPassword)) {
-                    cursor = Login_activity.db.rawQuery("SELECT * FROM BIBOO WHERE Username = ?",
-                            new String[]{username});
+                    cursor = db.query(User_Database.TABLE_NAME, null, "username=?", new String[]{username}, null, null, null);
                     if (cursor.getCount() > 0) {
-                        // User with the same username already exists
-                        Toast.makeText(this, "Username already exist! Try again", Toast.LENGTH_SHORT).show();
                         clear();
                         signup_username.requestFocus();
+                        promptDialogs.statusDialogs("ERROR!", "Username already exists! Try again.");
+                        promptDialogs.show();
+                    } else {
 
-                    } else {
+
                         // Insert the user into the database
-                        Login_activity.db.execSQL("INSERT INTO BIBOO(Username, Password)" +
-                                "VALUES('" + username + "'" + "," + "'" + password + "')");
-                        Intent h = new Intent(SignUp_activity.this, Login_activity.class);
-                        h.putExtra("username", username.toString());
-                        clear();
-                        startActivity(h);
-                        finish();
+                        ContentValues values = new ContentValues();
+                        values.put("username", username);
+                        values.put("password", password);
+                        values.put("name", name);
+                        values.put("age", age);
+                        values.put("gender", gender);
+                        values.put("email", email);
+
+                        long result = db.insert(User_Database.TABLE_NAME, null, values);
+                        if (result != -1) {
+                            // Insert successful
+                            // If the signup is successful, set the result and finish the activity
+                            Intent resultIntent = new Intent();
+                            resultIntent.putExtra("username", username);
+                            setResult(RESULT_OK, resultIntent);
+                            Intent h = new Intent(SignUp_activity.this, Homepage_activity.class);
+                            clear();
+                            startActivity(h);
+                            finish();
+                        } else {
+                            // Insert failed
+                            clear();
+                            promptDialogs.statusDialogs("ERROR!", "Error in inserting the data!");
+                            promptDialogs.show();
+                        }
+
+                        db.close();
                     }
-                    cursor.close();
-                    } else {
-                    Toast.makeText(this, "Password do not match! Try again", Toast.LENGTH_SHORT).show();
+
+                } else {
                     clear();
                     signup_username.requestFocus();
+                    promptDialogs.statusDialogs("ERROR!", "Password do not match! Try again.");
+                    promptDialogs.show();
 
                 }
             }
-
-        });
+        }
     }
 
     public void clear(){
@@ -141,18 +197,12 @@ public class SignUp_activity extends AppCompatActivity {
         signup_username.setText("");
         signup_password.setText("");
         signup_confirmpassword.setText("");
-        btnBirthdate.setText("");
+        btnBirthdate.setText("SET DATE");
         rdg_gender.clearCheck();
 
 
     }
+
+
 }
-
-//    db.execSQL("INSERT INTO StudentProfileDB (Employee_ID, Employee_Name)
-//    VALUES " +
-//            "('K11937426', 'Khyle Ushuaia Noblezada')");
-
-//     Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show();
-//     return;
-
 

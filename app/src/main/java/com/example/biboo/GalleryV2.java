@@ -25,6 +25,7 @@ public class GalleryV2 extends AppCompatActivity implements Animal_Data_Adapter.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery_v2);
+        ImmersiveMode.enableImmersiveMode(getWindow().getDecorView());
         //data initialization
         txt_gallery_classification = findViewById(R.id.txt_galleryClassificiation);
         txt_description = findViewById(R.id.txt_galleryDescription);
@@ -60,10 +61,8 @@ public class GalleryV2 extends AppCompatActivity implements Animal_Data_Adapter.
 
         // listener used in returning to previous activity (Gallery)
         btn_backToGallery.setOnClickListener(v-> {
-            Intent intentBack = new Intent(getApplicationContext(), Gallery.class);
-            intentBack.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intentBack);
-            overridePendingTransition(R.anim.fade_out, 0);
+            Intent intent = new Intent(GalleryV2.this, Gallery.class);
+            startActivity(intent);
             finish();
         });
 
@@ -78,7 +77,7 @@ public class GalleryV2 extends AppCompatActivity implements Animal_Data_Adapter.
 
         //getting data from columns using cursor and inserting it on animalData
         while (cursor.moveToNext()) {
-            Animal_Model model = new Animal_Model(cursor.getInt(0),cursor.getString(1), cursor.getString(2),cursor.getString(3),cursor.getString(4),cursor.getString(5),cursor.getString(6), cursor.getString(8));
+            Animal_Model model = new Animal_Model(cursor.getInt(0),cursor.getString(1), cursor.getString(2),cursor.getString(3),cursor.getString(4),cursor.getString(5),cursor.getString(6), cursor.getString(7), cursor.getString(8));
             animalData.add(model);
         }
         //using the constructed adapter to set the data for recycler view

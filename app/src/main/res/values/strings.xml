@@ -9,11 +9,28 @@
     <string name="termsConditions">Terms and Conditions</string>
     <string name="data_privacy">Data Privacy Act of 2012</string>
     <string name="copyright">© Copyright All rights reserved.</string>
-    <string name="animalia"><U>ANIMALIA</U></string>
-    <string name="land"><U>LAND ANIMALS</U></string>
-    <string name="aquatic"><U>AQUATIC ANIMALS</U></string>
-    <string name="aerial"><U>AERIAL ANIMALS</U></string>
-    <string name="prehistoric"><U>PREHISTORIC ANIMALS</U></string>
+    <string name="animalia"><u>ANIMALIA</u></string>
+    <string name="score"><u>SCORE</u></string>
+    <string name="tutorial"><u>ANIMALIA GAME INFORMATION</u></string>
+    <string name="tutAnimafication"><u>ANIMAFICATION:</u></string>
+    <string name="tutAnimadiet"><u>ANIMADIET:</u></string>
+    <string name="tutPointingSystem"><u>POINTING SYSTEM:</u></string>
+    <string name="gamelist">GAME LIST</string>
+    <string name="land"><u>LAND ANIMALS</u></string>
+    <string name="aquatic"><u>AQUATIC ANIMALS</u></string>
+    <string name="aerial"><u>AERIAL ANIMALS</u></string>
+    <string name="prehistoric"><u>PREHISTORIC ANIMALS</u></string>
+
+    <string name="animafication_tutorial">Given with jumbled letters and an image, the task is to identify the animal by typing its name in the provided text area. Hints will automatically show once three wrong answers were reached.
+    </string>
+    <string name="animadiet_tutorial">Based on the animal shown, the player needs to identify which diet it is classified into. Gain points by dragging the correct animal food into the animal diet area. The player can use hints, which will eliminate one animal food that is not a possible diet of the given animal with the cost of 300 points
+    </string>
+    <string name="pointingsystem_tutorial">Each correct answer will gain players with 100 points. However, streaks can help gain even more points.
+        Achieving 2-4 winstreaks is equivalent to 300 points per correct answer, while 5-9 winstreaks will equate to 500 points per correct answer.
+        But with 10 winstreaks and above, players can gain 1000 points per correct answer. Accumulate points to achieve high scores and climb the way to the top of the leaderboards!
+</string>
+
+
 
     <string name="land_animals">Land animals are a varied group of organisms that inhabit terrestrial environments, ranging from microscopic insects to large mammals. They have adapted to life on land, developing structures such as legs or limbs for locomotion and diverse survival strategies in different ecosystems.</string>
     <string name="aquatic_animals">Aquatic animals, residing in water environments, exhibit a wide spectrum of adaptations for life beneath the surface. From streamlined fish with fins for swimming to marine mammals like dolphins, these organisms have evolved diverse traits to navigate and thrive in aquatic habitats.</string>

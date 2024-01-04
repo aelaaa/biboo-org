@@ -2,16 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/biboo_icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/biboo_icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.BIBOO"
-        tools:targetApi="31">
+        tools:targetApi="tiramisu"
+        android:enableOnBackInvokedCallback="true">
+
         <activity
             android:name=".SplashActivity"
             android:exported="true">
@@ -21,18 +24,50 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Gallery"
-            android:exported="false"/>
+
         <activity
             android:name=".Login_activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".SignUp_activity"
             android:exported="false"/>
-        <activity android:name=".SignUp_activity"
-            android:exported="false">
-        </activity>
+
+        <activity
+            android:name=".Homepage_activity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".Animafication"
+            android:exported="false" />
+
+        <activity
+            android:name=".Anima_Diet"
+            android:exported="false" />
+        <activity
+            android:name=".Anima_Descrip"
+            android:exported="false" />
+        <activity
+            android:name=".AnimaGames"
+            android:exported="false" />
+
+        <activity
+            android:name=".viewscore"
+            android:exported="false" />
+
+        <activity
+            android:name=".Gallery"
+            android:exported="false" />
+
         <activity
             android:name=".GalleryV2"
             android:exported="false" />
+
+        <provider
+            android:name=".AnimalContentProvider"
+            android:authorities="com.example.biboo.animalcontentprovider"
+            android:exported="false" />
+
     </application>
 
 </manifest>
